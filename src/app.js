@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 
 import productRoute from "../routes/product"
 import categoryRoute from "../routes/category"
+import authRoute from "../routes/auth"
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(express.json())
 // router
 app.use("/api",productRoute)
 app.use("/api",categoryRoute)
+app.use("/api",authRoute);
 
 // connect database
 mongoose.connect('mongodb://localhost:27017/assignment')
