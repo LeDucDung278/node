@@ -28,9 +28,10 @@
     "mongoose": "^6.2.10",
     "morgan": "^1.10.0",
     "slugify": "^1.6.5",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "nodemon": "^2.0.19"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    
   }
 }
