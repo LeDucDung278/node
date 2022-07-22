@@ -25,7 +25,7 @@ mongoose.connect('mongodb://localhost:27017/assignment')
     .catch((error) => console.log(error))
 
 // connection
-const PORT = 3636;
+const PORT = process.env.PORT || 3636;
 app.listen(PORT, () => {
     console.log("Server:", PORT);
 })
