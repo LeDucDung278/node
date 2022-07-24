@@ -20,7 +20,12 @@ app.use("/api",categoryRoute)
 app.use("/api",authRoute);
 
 // connect database
-mongoose.connect('mongodb://localhost:27017/assignment')
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost:27017/assignment", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useFindAndModify: false,
+    useCreateIndex: true,
+  })
     .then(() => console.log("Success database"))
     .catch((error) => console.log(error))
 
