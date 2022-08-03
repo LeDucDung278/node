@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors"
 import morgan from "morgan";
 import mongoose from "mongoose";
+require("dotenv").config()
 
 import productRoute from "../routes/product"
 import categoryRoute from "../routes/category"
@@ -20,7 +21,7 @@ app.use("/api",categoryRoute)
 app.use("/api",authRoute);
 
 // connect database
-mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost:27017/assignment", {
+mongoose.connect(process.env.DB_URLL || "mongodb://localhost:27017/assignment", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
